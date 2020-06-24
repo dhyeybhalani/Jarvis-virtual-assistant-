@@ -32,13 +32,13 @@ def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print('Listening......')
-        r.pause_threshold = 1
+       # r.pause_threshold = 1
         audio = r.listen(source)
     try:
         print("Recognizing.....")
         query = r.recognize_google(audio , language='en-in')
         print(f'User said: {query}\n')
-    except Exception as e:
+    except Exception :
         #print(e)
         print("Say that again please.....")
         return "None"
@@ -73,6 +73,6 @@ if __name__ == "__main__":
         elif 'open code' in query:
             codePath = "C:\\Users\\Dell\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
-        elif 'by' or 'buy' or 'bye' in query:
-            speak("Bye Sir")
+        elif 'bye-bye' in query:
+            speak("Bye sir")
             break
