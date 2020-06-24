@@ -1,0 +1,4 @@
+please install 
+speech recognition module
+wikipedia module
+pyaudio module
